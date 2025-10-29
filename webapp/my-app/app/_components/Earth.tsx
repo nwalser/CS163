@@ -161,7 +161,9 @@ function EarthMesh({
   earthMap.colorSpace = THREE.SRGBColorSpace
   earthMap.anisotropy = 8
 
-  useFrame((_, d) => { meshRef.current.rotation.y += d * 0.15 })
+  useFrame((_, d) => { 
+    //meshRef.current.rotation.y += d * 0.15 
+})
 
   return (
     <mesh ref={meshRef}>
@@ -179,18 +181,18 @@ export default function ThreeEarthWithOverlays({
   radius = 1,
   overlays = [
     // Examples — replace with your data:
-    { type: 'image', src: '/overlays/image.png', lat: 37.7749, lon: -122.4194, size: 0.2, depth: 0.4 } as ImageOverlay,
-    { type: 'svg', src: '/overlays/image.svg', lat: 47.3769, lon: 8.5417, size: 0.25, depth: 0.45 } as SvgOverlay,
+    { type: 'image', src: '/overlays/age2.png', lat: 90, lon: 30, size: 1, depth: 0.4 } as ImageOverlay,
   ],
 }: Props) {
   return (
     <div className="w-full h-full">
-      <Canvas camera={{ position: [2.2, 1.2, 2.2], fov: 45 }}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 3, 5]} intensity={2} />
+      <Canvas camera={{ position: [2.2, 1.2, .2], fov: 45 }}>
+        <ambientLight intensity={3} />
         <EarthMesh radius={radius} earthTextureSrc={earthTextureSrc} overlays={overlays} />
         <OrbitControls enablePan={false} enableZoom />
       </Canvas>
     </div>
   )
 }
+
+// <directionalLight position={[5, 3, 5]} intensity={2} />
