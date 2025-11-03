@@ -6,7 +6,7 @@ export default function Home() {
       <ThreeEarthWithNSIDCOverlay
         overlay={{
           src: '/overlays/age5.png',
-          extentMeters: [-3850000, -5350000, 3750000, 5850000], // <- replace with yours
+          extentMeters: [-3850000, -5350000, 3750000, 5850000],
           projection: 'north',
           outWidth: 4096,
         }}
