@@ -1,0 +1,109 @@
+UserId,Type,Score
+1,Mental Demand,17
+2,Mental Demand,7
+3,Mental Demand,96
+4,Mental Demand,49
+5,Mental Demand,5
+6,Mental Demand,24
+7,Mental Demand,6
+8,Mental Demand,15
+9,Mental Demand,5
+10,Mental Demand,63
+11,Mental Demand,62
+12,Mental Demand,10
+13,Mental Demand,20
+14,Mental Demand,11
+15,Mental Demand,61
+16,Mental Demand,80
+17,Mental Demand,81
+18,Mental Demand,50
+1,Physical Demand,60
+2,Physical Demand,93
+3,Physical Demand,100
+4,Physical Demand,74
+5,Physical Demand,14
+6,Physical Demand,25
+7,Physical Demand,62
+8,Physical Demand,50
+9,Physical Demand,17
+10,Physical Demand,100
+11,Physical Demand,82
+12,Physical Demand,65
+13,Physical Demand,60
+14,Physical Demand,15
+15,Physical Demand,50
+16,Physical Demand,100
+17,Physical Demand,91
+18,Physical Demand,85
+1,Temporal Demand,8
+2,Temporal Demand,25
+3,Temporal Demand,100
+4,Temporal Demand,20
+5,Temporal Demand,4
+6,Temporal Demand,3
+7,Temporal Demand,29
+8,Temporal Demand,60
+9,Temporal Demand,11
+10,Temporal Demand,35
+11,Temporal Demand,50
+12,Temporal Demand,0
+13,Temporal Demand,50
+14,Temporal Demand,11
+15,Temporal Demand,30
+16,Temporal Demand,100
+17,Temporal Demand,33
+18,Temporal Demand,20
+1,Performance,90
+2,Performance,97
+3,Performance,70
+4,Performance,82
+5,Performance,90
+6,Performance,70
+7,Performance,75
+8,Performance,66
+9,Performance,26
+10,Performance,22
+11,Performance,62
+12,Performance,80
+13,Performance,50
+14,Performance,51
+15,Performance,75
+16,Performance,100
+17,Performance,41
+18,Performance,80
+1,Effort,32
+2,Effort,92
+3,Effort,30
+4,Effort,48
+5,Effort,100
+6,Effort,50
+7,Effort,82
+8,Effort,60
+9,Effort,50
+10,Effort,75
+11,Effort,70
+12,Effort,70
+13,Effort,20
+14,Effort,44
+15,Effort,60
+16,Effort,100
+17,Effort,73
+18,Effort,70
+1,Frustration,8
+2,Frustration,7
+3,Frustration,50
+4,Frustration,14
+5,Frustration,5
+6,Frustration,25
+7,Frustration,9
+8,Frustration,70
+9,Frustration,55
+10,Frustration,44
+11,Frustration,50
+12,Frustration,5
+13,Frustration,30
+14,Frustration,67
+15,Frustration,11
+16,Frustration,43
+17,Frustration,38
+18,Frustration,40

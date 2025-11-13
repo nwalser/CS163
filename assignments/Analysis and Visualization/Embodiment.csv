@@ -1,0 +1,73 @@
+PID,Viewpoint, Coaching Style,Embodiment
+PH119,First Person, Controlling,3.74
+PH119,First Person, Autonomous,3.91
+PH119,Third Person, Autonomous,4.79
+PH119,Third Person, Controlling,4.53
+Me336,Third Person, Controlling,1.88
+Me336,Third Person, Autonomous,2.50
+Me336,First Person, Autonomous,2.06
+Me336,First Person, Controlling,2.85
+Ma412,First Person, Autonomous,3.91
+Ma412,First Person, Controlling,4.00
+Ma412,Third Person, Controlling,3.74
+Ma412,Third Person, Autonomous,3.91
+WI952,Third Person, Autonomous,3.21
+WI952,Third Person, Controlling,2.59
+WI952,First Person, Controlling,1.35
+WI925,First Person, Autonomous,2.06
+NE090,First Person, Controlling,4.44
+NE090,First Person, Autonomous,3.82
+NE090,Third Person, Autonomous,4.44
+NE090,Third Person, Controlling,4.97
+PI867,Third Person, Controlling,3.38
+PI867,Third Person, Autonomous,3.38
+PI867,First Person, Autonomous,3.74
+PI867,First Person, Controlling,3.47
+NE777,First Person, Autonomous,4.44
+DE777,First Person, Controlling,4.18
+DE777,Third Person, Controlling,4.79
+NE777,Third Person, Autonomous,4.71
+Bu035,Third Person, Autonomous,3.47
+Bu035,Third Person, Controlling,3.65
+Bu035,First Person, Controlling,3.74
+Bu035,First Person, Autonomous,3.56
+po449,First Person, Controlling,4.53
+po449,First Person, Autonomous,4.71
+po449,Third Person, Autonomous,5.24
+po449,Third Person, Controlling,5.76
+LJ 814,Third Person, Controlling,5.59
+LJ 814,Third Person, Autonomous,5.24
+LJ 814,First Person, Autonomous,6.21
+LJ 814,First Person, Controlling,6.03
+JH 744,First Person, Autonomous,2.76
+JH 774,First Person, Controlling,2.68
+JH 774,Third Person, Controlling,3.03
+JH 744,Third Person, Autonomous,2.85
+Ka513,Third Person, Autonomous,3.38
+Ka513,Third Person, Controlling,2.94
+Ka513,First Person, Controlling,2.85
+Ka513,First Person, Autonomous,2.85
+py009,First Person, Controlling,3.38
+py009,First Person, Autonomous,3.21
+py009,Third Person, Autonomous,4.26
+py009,Third Person, Controlling,4.09
+nc017,Third Person, Controlling,3.12
+nc017,Third Person, Autonomous,4.26
+nc017,First Person, Autonomous,2.76
+nc017,First Person, Controlling,3.29
+KH628,First Person, Autonomous,3.74
+KH628,First Person, Controlling,4.09
+KH628,Third Person, Controlling,4.53
+KH628,Third Person, Autonomous,4.26
+pu8293,Third Person, Autonomous,6.47
+pu8293,Third Person, Controlling,6.91
+pu8293,First Person, Controlling,5.94
+pu8293,First Person, Autonomous,6.56
+sy313,Third Person, Controlling,5.06
+sy313,Third Person, Autonomous,4.79
+sy313,First Person, Autonomous,5.59
+sy313,First Person, Controlling,5.94
+Ch 223,Third Person, Autonomous,4.35
+Ch 223,Third Person, Controlling,4.09
+Ch 223,First Person, Controlling,3.91
+Ch 223,First Person, Autonomous,3.82

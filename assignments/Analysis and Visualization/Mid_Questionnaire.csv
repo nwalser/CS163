@@ -1,0 +1,73 @@
+PID,Viewpoint, Coaching Style,Embodiment,Social_Presence,Social_Presence_Scale3,Enjoyment,Difficulty,PerceptionCoach,Recommendation
+PH119,First Person,Controlled S.,3.74,4.60,0.60,5,1,2,10
+PH119,First Person,Autonomous-SS.,3.91,4.30,0.30,5,1,2,10
+PH119,Third Person,Autonomous-SS.,4.79,4.60,0.60,5,1,2.5,11
+PH119,Third Person,Controlled S.,4.53,5.20,1.20,5,1,3.5,11
+Me336,Third Person,Controlled S.,1.88,4.00,0.00,5,1,2,9
+Me336,Third Person,Autonomous-SS.,2.50,3.70,-0.30,5,1,1,9
+Me336,First Person,Autonomous-SS.,2.06,3.40,-0.60,5,1,1,9
+Me336,First Person,Controlled S.,2.85,3.10,-0.90,5,1,1.5,10
+Ma412,First Person,Autonomous-SS.,3.91,4.00,0.00,5,1,3.5,10
+Ma412,First Person,Controlled S.,4.00,4.30,0.30,5,1,5,11
+Ma412,Third Person,Controlled S.,3.74,4.90,0.90,5,1,5,11
+Ma412,Third Person,Autonomous-SS.,3.91,4.30,0.30,5,1,3,11
+WI952,Third Person,Autonomous-SS.,3.21,5.20,1.20,5,1,3,11
+WI952,Third Person,Controlled S.,2.59,4.90,0.90,4,2,3,11
+WI952,First Person,Controlled S.,1.35,4.60,0.60,5,1,1,11
+WI925,First Person,Autonomous-SS.,2.06,4.60,0.60,5,1,1,11
+NE090,First Person,Controlled S.,4.44,4.60,0.60,5,1,5,11
+NE090,First Person,Autonomous-SS.,3.82,4.30,0.30,5,1,4,11
+NE090,Third Person,Autonomous-SS.,4.44,4.00,0.00,5,1,3.5,11
+NE090,Third Person,Controlled S.,4.97,4.60,0.60,5,1,5,11
+PI867,Third Person,Controlled S.,3.38,4.30,0.30,4,2,3.5,8
+PI867,Third Person,Autonomous-SS.,3.38,3.70,-0.30,4,2,2,7
+PI867,First Person,Autonomous-SS.,3.74,3.70,-0.30,4,2,2,7
+PI867,First Person,Controlled S.,3.47,3.40,-0.60,4,2,3,8
+NE777,First Person,Autonomous-SS.,4.44,5.50,1.50,4,2,3.5,7
+DE777,First Person,Controlled S.,4.18,4.90,0.90,4,2,4,8
+DE777,Third Person,Controlled S.,4.79,4.90,0.90,4,2,4,8
+NE777,Third Person,Autonomous-SS.,4.71,5.20,1.20,4,2,3,9
+Bu035,Third Person,Autonomous-SS.,3.47,4.00,0.00,4,2,2,6
+Bu035,Third Person,Controlled S.,3.65,4.60,0.60,4,2,3,8
+Bu035,First Person,Controlled S.,3.74,4.00,0.00,5,1,3,10
+Bu035,First Person,Autonomous-SS.,3.56,4.00,0.00,4,2,2,9
+po449,First Person,Controlled S.,4.53,2.80,-1.20,5,1,4,11
+po449,First Person,Autonomous-SS.,4.71,3.40,-0.60,4,2,1.5,11
+po449,Third Person,Autonomous-SS.,5.24,3.10,-0.90,4,2,1,11
+po449,Third Person,Controlled S.,5.76,3.40,-0.60,5,1,5,11
+LJ 814,Third Person,Controlled S.,5.59,4.60,0.60,3,3,4,11
+LJ 814,Third Person,Autonomous-SS.,5.24,4.00,0.00,4,2,1,11
+LJ 814,First Person,Autonomous-SS.,6.21,2.80,-1.20,4,2,1,11
+LJ 814,First Person,Controlled S.,6.03,2.50,-1.50,5,1,4,11
+JH 744,First Person,Autonomous-SS.,2.76,4.00,0.00,5,1,2,8
+JH 774,First Person,Controlled S.,2.68,4.00,0.00,4,2,3,8
+JH 774,Third Person,Controlled S.,3.03,4.00,0.00,4,2,3,8
+JH 744,Third Person,Autonomous-SS.,2.85,4.00,0.00,4,2,3,8
+Ka513,Third Person,Autonomous-SS.,3.38,3.10,-0.90,5,1,2,11
+Ka513,Third Person,Controlled S.,2.94,5.20,1.20,2,4,3,11
+Ka513,First Person,Controlled S.,2.85,5.20,1.20,5,1,2,11
+Ka513,First Person,Autonomous-SS.,2.85,4.30,0.30,5,1,1,11
+py009,First Person,Controlled S.,3.38,4.30,0.30,3,3,4,9
+py009,First Person,Autonomous-SS.,3.21,3.10,-0.90,3,3,2,9
+py009,Third Person,Autonomous-SS.,4.26,3.40,-0.60,4,2,3,10
+py009,Third Person,Controlled S.,4.09,3.70,-0.30,4,2,4,10
+nc017,Third Person,Controlled S.,3.12,2.20,-1.80,3,3,3.5,9
+nc017,Third Person,Autonomous-SS.,4.26,3.70,-0.30,2,4,2,7
+nc017,First Person,Autonomous-SS.,2.76,4.00,0.00,2,4,1.5,7
+nc017,First Person,Controlled S.,3.29,4.00,0.00,4,2,5,9
+KH628,First Person,Autonomous-SS.,3.74,4.00,0.00,1,5,2,10
+KH628,First Person,Controlled S.,4.09,5.20,1.20,5,1,5,11
+KH628,Third Person,Controlled S.,4.53,5.20,1.20,4,2,4,9
+KH628,Third Person,Autonomous-SS.,4.26,3.40,-0.60,3,3,3,7
+pu8293,Third Person,Autonomous-SS.,6.47,5.80,1.80,5,1,5,11
+pu8293,Third Person,Controlled S.,6.91,4.60,0.60,5,1,5,11
+pu8293,First Person,Controlled S.,5.94,4.90,0.90,5,1,5,11
+pu8293,First Person,Autonomous-SS.,6.56,6.40,2.40,5,1,5,11
+sy313,Third Person,Controlled S.,5.06,5.20,1.20,4,2,4,9
+sy313,Third Person,Autonomous-SS.,4.79,4.60,0.60,4,2,1,9
+sy313,First Person,Autonomous-SS.,5.59,4.90,0.90,5,1,4,10
+sy313,First Person,Controlled S.,5.94,4.00,0.00,5,1,3.5,10
+Ch 223,Third Person,Autonomous-SS.,4.35,4.90,0.90,4,2,2,4
+Ch 223,Third Person,Controlled S.,4.09,4.90,0.90,5,1,4,6
+Ch 223,First Person,Controlled S.,3.91,5.80,1.80,4,2,4.5,7
+Ch 223,First Person,Autonomous-SS.,3.82,4.30,0.30,2,4,2,6
