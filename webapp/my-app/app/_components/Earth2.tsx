@@ -2,7 +2,7 @@
 
 import * as THREE from 'three'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import proj4 from 'proj4'
 
@@ -18,7 +18,7 @@ const EPSG_3031 =
 
 type NSIDCProjection = 'north' | 'south'
 
-type OverlayConfig = {
+export type OverlayConfig = {
   /** URL of your NSIDC-projected raster (PNG/JPG with transparency if you want blending) */
   src: string
   /** Projected extent of the image in METERS: [xmin, ymin, xmax, ymax] in EPSG:3413/3031 coordinates */
@@ -34,6 +34,7 @@ type OverlayConfig = {
 
 function useImage(url: string) {
   const [img, setImg] = useState<HTMLImageElement | null>(null)
+
   useEffect(() => {
     let canceled = false
     const i = new Image()
@@ -45,6 +46,7 @@ function useImage(url: string) {
       canceled = true
     }
   }, [url])
+
   return img
 }
 
@@ -66,7 +68,10 @@ function useNSIDCOverlayTexture({
     if (!img) return
 
     // Setup proj4 transforms
-    const from4326toPolar = proj4('EPSG:4326', projection === 'north' ? EPSG_3411 : EPSG_3031)
+    const from4326toPolar = proj4(
+      'EPSG:4326',
+      projection === 'north' ? EPSG_3411 : EPSG_3031,
+    )
 
     // Build a source canvas for fast pixel reads
     const srcCanvas = document.createElement('canvas')
@@ -97,16 +102,23 @@ function useNSIDCOverlayTexture({
       const yMeters = ymin + v * (ymax - ymin)
 
       // map meters to source pixel coords (assuming full extent spans the image)
-      const sx = ( (xMeters - xmin) / (xmax - xmin) ) * (srcW - 1)
-      const sy = ( 1 - ( (yMeters - ymin) / (ymax - ymin) ) ) * (srcH - 1) // y downwards in image
+      const sx = ((xMeters - xmin) / (xmax - xmin)) * (srcW - 1)
+      const sy =
+        (1 - (yMeters - ymin) / (ymax - ymin)) * (srcH - 1) // y downwards in image
 
       // bilinear
-      const x0 = Math.floor(sx), y0 = Math.floor(sy)
-      const x1 = Math.min(x0 + 1, srcW - 1), y1 = Math.min(y0 + 1, srcH - 1)
-      const tx = sx - x0, ty = sy - y0
+      const x0 = Math.floor(sx),
+        y0 = Math.floor(sy)
+      const x1 = Math.min(x0 + 1, srcW - 1),
+        y1 = Math.min(y0 + 1, srcH - 1)
+      const tx = sx - x0,
+        ty = sy - y0
       const idx = (x: number, y: number) => 4 * (y * srcW + x)
 
-      const c00 = idx(x0, y0), c10 = idx(x1, y0), c01 = idx(x0, y1), c11 = idx(x1, y1)
+      const c00 = idx(x0, y0),
+        c10 = idx(x1, y0),
+        c01 = idx(x0, y1),
+        c11 = idx(x1, y1)
       const out = [0, 0, 0, 0]
       for (let k = 0; k < 4; k++) {
         const v00 = srcData.data[c00 + k]
@@ -130,7 +142,6 @@ function useNSIDCOverlayTexture({
         const lon = -180 + (x / (dstW - 1)) * 360
 
         // Forward-project lon/lat to polar stereographic meters
-        // proj4 takes [lon, lat]
         const [xm, ym] = from4326toPolar.forward([lon, lat])
 
         // Normalize into [0,1] across the provided image extent
@@ -168,19 +179,27 @@ function useNSIDCOverlayTexture({
   return tex
 }
 
-function Earth({
-  radius = 1,
-  baseTextureSrc = '/textures/earth.jpg',
-}: {
+/**
+ * Earth globe — memoized so it doesn’t “reload” when overlay props change.
+ */
+const Earth: React.FC<{
   radius?: number
   baseTextureSrc?: string
+}> = React.memo(function Earth({
+  radius = 1,
+  baseTextureSrc = '/textures/earth.jpg',
 }) {
   const meshRef = useRef<THREE.Mesh>(null!)
-  const [baseMap] = useState(() => new THREE.TextureLoader().load(baseTextureSrc))
-  baseMap.colorSpace = THREE.SRGBColorSpace
-  baseMap.anisotropy = 8
 
-  //useFrame((_, d) => { meshRef.current.rotation.y += d * 0.15 })
+  const baseMap = useMemo(() => {
+    const loader = new THREE.TextureLoader()
+    const tex = loader.load(baseTextureSrc)
+    tex.colorSpace = THREE.SRGBColorSpace
+    tex.anisotropy = 8
+    return tex
+  }, [baseTextureSrc])
+
+  // useFrame((_, d) => { meshRef.current.rotation.y += d * 0.15 })
 
   return (
     <mesh ref={meshRef}>
@@ -188,7 +207,7 @@ function Earth({
       <meshStandardMaterial map={baseMap} />
     </mesh>
   )
-}
+})
 
 function OverlaySphere({
   radius = 1.001, // tiny offset to avoid z-fighting
@@ -223,6 +242,7 @@ export default function ThreeEarthWithNSIDCOverlay({
   earthTextureSrc?: string
   radius?: number
 }) {
+  // Only this texture is recomputed when `overlay` changes (e.g. slider changes src)
   const reprojTex = useNSIDCOverlayTexture(overlay)
 
   return (
