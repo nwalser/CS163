@@ -1,13 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import ThreeEarthWithNSIDCOverlay from "./_components/Earth2";
+import { useState } from "react";
+import { Earth } from "./_components/Earth2";
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 
-// ------------------------------------------------------
-// 1. Generate all YYYYMMDD values from 1980 → 2022
-// ------------------------------------------------------
-const start = new Date(1980, 0, 1); // Jan 1, 1980
-const end = new Date(2022, 11, 31); // Dec 31, 2022
+const start = new Date(1980, 0, 1);
+const end = new Date(2022, 11, 31);
 
 function generateDateList() {
   const list: string[] = [];
@@ -35,16 +34,6 @@ export default function Home() {
   const month = filename.slice(4, 6);
   const day = filename.slice(6, 8);
 
-  const overlay = useMemo(
-    () => ({
-      src: `/sea-ice-extent/${year}/${month}/${filename}.png`,
-      extentMeters: [-3850000, -5350000, 3750000, 5850000],
-      projection: "north" as const,
-      outWidth: 4096,
-    }),
-    [filename],
-  );
-
   return (
     <main className="flex flex-col items-center justify-center h-screen bg-gray-900 gap-6">
       {/* Display current date */}
@@ -54,11 +43,17 @@ export default function Home() {
       </div>
 
       {/* Earth */}
-      <ThreeEarthWithNSIDCOverlay
-        overlay={overlay}
-        earthTextureSrc="/textures/earth.jpg"
-        radius={1}
-      />
+      <div className="w-full h-full">
+        <Canvas camera={{ position: [2.2, 1.1, 2.2], fov: 45 }}>
+          <ambientLight intensity={2} />
+          <group>
+            <Earth radius={1} baseTextureSrc={`/textures/earth.jpg`} />
+            <Earth radius={1.001} baseTextureSrc={`/sea-ice-extent-texture/${year}/${month}/${filename}.png`} />
+          </group>
+          <OrbitControls enablePan={false} enableZoom />
+        </Canvas>
+      </div>
+
 
       {/* Slider: 1 day per step */}
       <div className="w-full max-w-2xl px-8">
