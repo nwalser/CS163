@@ -47,7 +47,7 @@ export default function Home() {
         <Canvas camera={{ position: [2.2, 1.1, 2.2], fov: 45 }}>
           <ambientLight intensity={2} />
           <group>
-            <Earth radius={1} baseTextureSrc={`/textures/earth.jpg`} />
+            <Earth radius={1} baseTextureSrc={`/textures/earth2.jpg`} />
             <Earth radius={1.001} baseTextureSrc={`/sea-ice-extent-texture/${year}/${month}/${filename}.png`} />
           </group>
           <OrbitControls enablePan={false} enableZoom />
